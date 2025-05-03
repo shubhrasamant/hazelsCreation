@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: url("./assets/images/home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 0px;
+        li {
+            cursor: pointer;
+        }
+    }
+    .soldOutText {
+        color: red;
+    }
+    .priceText {
+        color: dodgerblue;
+    }
+    .strikeThrough {
+        text-decoration: line-through;
+        padding-right: 10px;
+        opacity: 0.5;
+    }
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
