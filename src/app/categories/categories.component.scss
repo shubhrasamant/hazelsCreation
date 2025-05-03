@@ -1,0 +1,27 @@
+.productCategories {
+    ul {
+        background-color: rgba(255, 215, 220, 0.44);
+        list-style-type: none;
+        padding: 0;
+        min-height: 50px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 1rem;
+        li {
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 10px 0px;
+            font-weight: bold;
+            &:hover {
+                color: #007BFF;
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+        li.active {
+            color: #007BFF !important;
+            cursor: default;
+        }
+    }
+}

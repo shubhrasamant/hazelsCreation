@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <app-categories></app-categories>
+    <!-- Show All Products Section -->
+    <div class="productsContent">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let item of singlePageProducts">
+                <div class="card col-12 p-3">
+                    <img class="card-img-top" src='{{"../../../../assets/images/featured/"+item.productImg+".jpg"}}' alt="Card image cap">
+                    <div class="card-body p-0 pt-3">
+                        <h5 class="card-title">{{item.productName}}</h5>
+                        <h6 class="card-title">{{item.productType}}</h6>
+                        <h6 *ngIf="!item.soldOut" class="card-title">
+                            <span [ngClass]="item.afterDiscountPrice > 0 ? 'strikeThrough': 'priceText'">{{item.price | currency:'INR'}}</span>
+                            <span class="priceText" *ngIf="item.afterDiscountPrice > 0">{{item.afterDiscountPrice | currency:'INR'}}</span>
+                        </h6>
+                        <h6 *ngIf="item.soldOut" class="card-title soldOutText"> Sold Out </h6>
+                        <button class="btn w-100" routerLink="product/{{item.id}}">View Product</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pagination -->
+        <div id="paginationContainer">
+            <jw-pagination id="pagination" [pageSize]="8" [items]="allProductsData" (changePage)="onChangePage($event)"></jw-pagination>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="productCategories">
+    <ul>
+        <li (click)="onClickCategory('featured')" [ngClass]="selectedCategory === 'featured' ? 'active' : ''">
+            Featured
+        </li>
+        <li (click)="onClickCategory('canvas')" [ngClass]="selectedCategory === 'canvas' ? 'active' : ''">
+            Canvas
+        </li>
+        <li (click)="onClickCategory('wallhanging')" [ngClass]="selectedCategory === 'wallhanging' ? 'active' : ''">
+            Wall Hangings
+        </li>
+        <li (click)="onClickCategory('hoopart')" [ngClass]="selectedCategory === 'hoopart' ? 'active' : ''">
+            Hoop Art
+        </li>
+        <li (click)="onClickCategory('keyholder')" [ngClass]="selectedCategory === 'keyholder' ? 'active' : ''">
+            Key Chain Holder
+        </li>
+        <li (click)="onClickCategory('clay')" [ngClass]="selectedCategory === 'clay' ? 'active' : ''">
+            Clay Products
+        </li>
+        <li (click)="onClickCategory('kidscrafts')" [ngClass]="selectedCategory === 'kidscrafts' ? 'active' : ''">
+            Kids Corner
+        </li>
+        <li (click)="onClickCategory('addons')" [ngClass]="selectedCategory === 'addons' ? 'active' : ''">
+            Add Ons
+        </li>
+    </ul>
+</div>

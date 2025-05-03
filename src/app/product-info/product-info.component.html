@@ -1,0 +1,65 @@
+<app-categories></app-categories>
+<!-- Show The Selected Product -->
+<div id="viewOneProduct">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 clearfix" id="carouselContainer">
+                <div class="col-md-12">
+                    <div id="custCarousel" class="carousel slide" data-interval="false" data-ride="carousel" align="center">
+                        <!-- slides -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"> 
+                                <img src='{{"../../../../assets/images/"+selectedProduct[0].productImg+"/1.jpg"}}' alt="{{selectedProduct[0].productImg}}"> 
+                            </div>
+                            <div class="carousel-item"> 
+                                <img src='{{"../../../../assets/images/"+selectedProduct[0].productImg+"/2.jpg"}}' alt="{{selectedProduct[0].productImg}}"> 
+                            </div>
+                            <div class="carousel-item"> 
+                                <img src='{{"../../../../assets/images/"+selectedProduct[0].productImg+"/3.jpg"}}' alt="{{selectedProduct[0].productImg}}"> 
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators list-inline">
+                            <li class="list-inline-item active"> 
+                                <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> 
+                                    <img src='{{"../../../../assets/images/"+selectedProduct[0].productImg+"/1.jpg"}}' class="img-fluid"> 
+                                </a> 
+                            </li>
+                            <li class="list-inline-item"> 
+                                <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> 
+                                    <img src='{{"../../../../assets/images/"+selectedProduct[0].productImg+"/2.jpg"}}' class="img-fluid"> 
+                                </a> 
+                            </li>
+                            <li class="list-inline-item"> 
+                                <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> 
+                                    <img src='{{"../../../../assets/images/"+selectedProduct[0].productImg+"/3.jpg"}}' class="img-fluid">
+                                </a> 
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Description -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" id="productDesc">
+                <div (click)="onClickOfBack()" class="text-right" id="backToProductLabel"><i class="fa fa-arrow-left mr-2" aria-hidden="true"></i>Back To Products</div>
+                <h3>{{selectedProduct[0].productName}}</h3>
+                <h5 class="card-title">{{selectedProduct[0].productType}}</h5>
+                <h5 *ngIf="!selectedProduct[0].soldOut" class="card-title">
+                    <span [ngClass]="selectedProduct[0].afterDiscountPrice > 0 ? 'strikeThrough': 'priceText'">{{selectedProduct[0].price | currency:'INR'}}</span>
+                    <span class="priceText" *ngIf="selectedProduct[0].afterDiscountPrice > 0">{{selectedProduct[0].afterDiscountPrice | currency:'INR'}}</span>
+                </h5>
+                <h4 *ngIf="selectedProduct[0].soldOut" class="card-title soldOutText"> Sold Out </h4>
+                <br>
+                <h5>{{selectedProduct[0].productDesc}}</h5>
+                <br> 
+                <h5>Specifications: </h5>
+                <h6 *ngFor="let specification of selectedProduct[0].specifications.split(',')">
+                    {{specification}}
+                </h6>
+                <br>
+                <a href="https://api.whatsapp.com/send?phone=919880854694&text=I want to enquire about {{selectedProduct[0].productName}}" target="_blank">
+                    <i class="fab fa-whatsapp fa-2x whatsappIcon"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

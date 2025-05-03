@@ -1,0 +1,27 @@
+#contactUs {
+    position: fixed;
+    top: 0;
+    min-height: 50px;
+    background-color: darkseagreen;
+    width: 100%;
+    color: white;
+    z-index: 999999;
+    text-align: center;
+    padding-top: 12px;
+    -webkit-box-shadow: 0px 4px 6px -3px darkseagreen;
+    -moz-box-shadow: 0px 4px 6px -3px darkseagreen;
+    box-shadow: 0px 4px 6px -3px darkseagreen;
+}
+.container-fluid {
+    margin-top: 50px;
+    padding-top: 20px;
+    .navbar-brand {
+        color: #000;
+        font-weight: bold;
+        font-family: Snell Roundhand, cursive;
+        font-size: 35px;
+    }
+    .form-outline {
+        width: 60%;
+    }
+}
