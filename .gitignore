@@ -45,4 +45,4 @@ testem.loga
 .DS_Store
 Thumbs.db
 
-/src/assets
+# /src/assets
