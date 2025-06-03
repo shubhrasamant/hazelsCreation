@@ -1,10 +1,9 @@
 .productCategories {
     ul {
-        background-color: rgba(255, 215, 220, 0.44);
+        background-color: rgb(209 194 245 / 50%);
         list-style-type: none;
         padding: 0;
         min-height: 50px;
-        border-radius: 10px;
         text-align: center;
         margin-top: 1rem;
         li {
@@ -12,16 +11,56 @@
             margin-left: 20px;
             margin-right: 20px;
             padding: 10px 0px;
-            font-weight: bold;
+            font-weight: 600;
             &:hover {
-                color: #007BFF;
+                color: #7a58cc;
                 cursor: pointer;
-                font-weight: bold;
+                font-weight: 600;
             }
         }
         li.active {
-            color: #007BFF !important;
+            color: #7a58cc !important;
             cursor: default;
+            font-weight: 600;
         }
     }
 }
+
+.productCategories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .productCategories li {
+    position: relative;
+    cursor: pointer;
+    padding: 8px 12px;
+  }
+  
+  .productCategories li.dropdown > ul.subMenu {
+    position: absolute;
+    left: 0;
+    top: 113%;
+    background-color: rgb(209 194 245 / 50%);
+    z-index: 10;
+    min-width: 160px;
+  }
+  
+  .productCategories li.dropdown > ul.subMenu li {
+    padding: 8px 12px;
+    white-space: nowrap;
+    text-align: left;
+    width: 100%;
+    color: black;
+  }
+  
+  .productCategories li.active {
+    font-weight: bold;
+    color: #7a58cc;
+  }
+
+  .productCategories li.dropdown > ul.subMenu li:hover {
+    font-weight: bold;
+    color: #7a58cc;
+  }

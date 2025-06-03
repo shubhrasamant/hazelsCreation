@@ -1,8 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background: url("./assets/images/home.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     .pagination {
         flex-wrap: wrap;
         justify-content: center;
@@ -14,8 +11,18 @@ body {
     .soldOutText {
         color: red;
     }
-    .priceText {
-        color: dodgerblue;
+    .priceText, .page-link {
+        color: #7a58cc;
+        font-weight: 600;
+    }
+    .page-item.active .page-link {
+        background-color: #7a58cc;
+        border-color: #7a58cc;
+    }
+    .page-link:hover {
+        background-color: #7a58cc;
+        border-color: #7a58cc;
+        color: white;
     }
     .strikeThrough {
         text-decoration: line-through;

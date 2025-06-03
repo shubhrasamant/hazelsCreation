@@ -1,27 +1,17 @@
-#contactUs {
-    position: fixed;
-    top: 0;
-    min-height: 50px;
-    background-color: darkseagreen;
-    width: 100%;
-    color: white;
-    z-index: 999999;
-    text-align: center;
-    padding-top: 12px;
-    -webkit-box-shadow: 0px 4px 6px -3px darkseagreen;
-    -moz-box-shadow: 0px 4px 6px -3px darkseagreen;
-    box-shadow: 0px 4px 6px -3px darkseagreen;
-}
-.container-fluid {
-    margin-top: 50px;
-    padding-top: 20px;
-    .navbar-brand {
-        color: #000;
-        font-weight: bold;
-        font-family: Snell Roundhand, cursive;
-        font-size: 35px;
+.app-header {
+    background-color: rgb(209 194 245 / 50%);
+    .contactUs {
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+        margin-top: 36px;
+        font-weight: 600;
+        color: rgb(122 88 204);
+        // -webkit-box-shadow: 0px 4px 6px -3px #7964A9;
+        // -moz-box-shadow: 0px 4px 6px -3px #7964A9;
+        // box-shadow: 0px 4px 6px -3px #7964A9;
     }
-    .form-outline {
-        width: 60%;
+    a {
+        color: #007bff;
     }
 }

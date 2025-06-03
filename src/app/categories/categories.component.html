@@ -1,28 +1,38 @@
 <div class="productCategories">
     <ul>
         <li (click)="onClickCategory('featured')" [ngClass]="selectedCategory === 'featured' ? 'active' : ''">
-            Featured
+            New Arrivals
         </li>
-        <li (click)="onClickCategory('canvas')" [ngClass]="selectedCategory === 'canvas' ? 'active' : ''">
-            Canvas
+        <li (click)="onClickCategory('homedecor')" [ngClass]="selectedCategory === 'homedecor' ? 'active' : ''">
+            Home Decor
         </li>
-        <li (click)="onClickCategory('wallhanging')" [ngClass]="selectedCategory === 'wallhanging' ? 'active' : ''">
-            Wall Hangings
+        <li [ngClass]="dropdownOpen ? 'active dropdown' : 'dropdown'" (click)="toggleDropdown($event)">
+            Pocket Friendly
+            <span class="dropdown-icon">{{ dropdownOpen ? '▲' : '▼' }}</span>
+            <ul class="subMenu" *ngIf="dropdownOpen">
+              <li (click)="onClickCategory('under50')"
+                  [ngClass]="selectedCategory === 'under50' ? 'active' : ''">
+                Under 50
+              </li>
+              <li (click)="onClickCategory('under99')"
+                  [ngClass]="selectedCategory === 'under99' ? 'active' : ''">
+                Under 99
+              </li>
+              <li (click)="onClickCategory('under199')"
+                  [ngClass]="selectedCategory === 'under199' ? 'active' : ''">
+                  Under 199
+              </li>
+              <li (click)="onClickCategory('under499')"
+                  [ngClass]="selectedCategory === 'under499' ? 'active' : ''">
+                  Under 499
+              </li>
+            </ul>
+          </li>
+        <li (click)="onClickCategory('festivedecor')" [ngClass]="selectedCategory === 'festivedecor' ? 'active' : ''">
+            Festive Decor
         </li>
-        <li (click)="onClickCategory('hoopart')" [ngClass]="selectedCategory === 'hoopart' ? 'active' : ''">
-            Hoop Art
-        </li>
-        <li (click)="onClickCategory('keyholder')" [ngClass]="selectedCategory === 'keyholder' ? 'active' : ''">
-            Key Chain Holder
-        </li>
-        <li (click)="onClickCategory('clay')" [ngClass]="selectedCategory === 'clay' ? 'active' : ''">
-            Clay Products
-        </li>
-        <li (click)="onClickCategory('kidscrafts')" [ngClass]="selectedCategory === 'kidscrafts' ? 'active' : ''">
-            Kids Corner
-        </li>
-        <li (click)="onClickCategory('addons')" [ngClass]="selectedCategory === 'addons' ? 'active' : ''">
-            Add Ons
+        <li (click)="onClickCategory('bottleart')" [ngClass]="selectedCategory === 'bottleart' ? 'active' : ''">
+            Bottle Art
         </li>
     </ul>
 </div>
